@@ -4,19 +4,19 @@ import TodoForm from './components/TodoComponents/TodoForm'
 
 
 
-const tasksData = [
-  {
-    name: 'Walk dog',
-    id: 12,
-    done: false
-  }
-];
 
 class App extends React.Component {
   constructor(){
     super();
     this.state = {
-      task: tasksData
+      tasks: [
+        {
+          name: 'Walk dog',
+          id: 12,
+          done: false
+        }
+      ], 
+      task: ''
     };
   }
 
@@ -39,13 +39,13 @@ class App extends React.Component {
 
     addItem = itemName => {
       const newItem = {
-        name: itemName,
+        name: itemName ,
         id: Date.now(),
         done: false
       };
       this.setState({
         tasks: [...this.state.tasks, newItem],
-        name: ''
+        task: ''
       });
     };
 
