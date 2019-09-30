@@ -33,7 +33,7 @@ class TodoForm extends React.Component {
                     
                 />
 
-                <button onClick = {this.addItem}>Add Todo</button>
+                <button onClick = {this.submitItem}>Add Todo</button>
                 
             </form>
         )
